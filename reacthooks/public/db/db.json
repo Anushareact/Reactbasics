@@ -1,0 +1,22 @@
+{
+  "user": [
+    {
+      "@type": "login",
+      "username": "anuanusha23543@gmail.com",
+      "password": "Informatica@123",
+      "id": 1
+    },
+    {
+      "@type": "login",
+      "username": "anuanusha2357743@gmail.com",
+      "password": "Informatica@12377",
+      "id": 2
+    },
+    {
+      "@type": "login",
+      "username": "anuaijhgfdfhgnusha23543@gmail.com",
+      "password": "Informatica@123",
+      "id": 3
+    }
+  ]
+}
