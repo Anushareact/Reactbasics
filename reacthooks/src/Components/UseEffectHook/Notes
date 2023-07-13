@@ -13,6 +13,10 @@ WHAT HAPPENED IF WE PASS DEPENDENCY ARRAY AND WHAT HAPPENED IF WE ARE NOT PASS D
 5.If you do not provide the dependencies array at all and only provide a function to useEffect, it will run after every render.
 6.when we pass empty dependency array to useEffect this will cause the effect function to only run once after the component has rendered the first time.(PREVENT INFINITE LOOP).
 7.If we pass any value to the dependency Array, the useEffect function will called  when the value is updated or changed.
+8.In simple terms:
+   a.if we pass only callback function with out dependency array to useEffect, it will call everytime means at the time component mounts and re-render.
+   b.if we provide empty dependency array , useEffect will call only once that means when thw component renders for the first time.
+   c.if we pass any state variables to dependency array, the useEffct will call when ever the state changes
 
 //refer this link to know more about useEffect:https://www.freecodecamp.org/news/react-useeffect-absolute-beginners/
 

@@ -1,9 +1,16 @@
-import React from 'react'
-
+import React,{useState} from "react";
+import { useEffect } from "react";
 const UseEffectHook = () => {
-  return (
-    <div>UseEffectHook</div>
-  )
-}
+    const [Users,setUsers]=useState()
 
-export default UseEffectHook
+
+  return (
+    <div>
+      
+  
+    </div>
+  );
+};
+
+
+export default UseEffectHook;
