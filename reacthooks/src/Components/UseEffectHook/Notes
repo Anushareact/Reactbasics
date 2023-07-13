@@ -9,7 +9,6 @@ WHAT HAPPENED IF WE PASS DEPENDENCY ARRAY AND WHAT HAPPENED IF WE ARE NOT PASS D
 */
 3.UseEffect will take two arguments one is callback function another one is dependency array.
 4.The function passed to useEffect is a callback function. This will be called after the component renders.
-
 5.If you do not provide the dependencies array at all and only provide a function to useEffect, it will run after every render.
 6.when we pass empty dependency array to useEffect this will cause the effect function to only run once after the component has rendered the first time.(PREVENT INFINITE LOOP).
 7.If we pass any value to the dependency Array, the useEffect function will called  when the value is updated or changed.
