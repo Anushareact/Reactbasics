@@ -1,0 +1,12 @@
+USEREDUCER
+*.UseReducer is function it will take two arguments one is reducer function another is inisitai state,
+*.this function will return array with two values i.e.,state and function=>this functions is used to modify the state generally called Dispatch.
+*.Dispatch will contain action and payload and it is an object.based on action the reucer function will update the state. that means we need to write a logics in the reducer function.
+*.dispatch will call automatically reducer function,
+*.we need to declare reducer and state,
+*.Reducer is function it will take two arguments.one is state and action. It will update the state based on action, and it will return updated state.
+*.UseReducer function send   state and dispatch functions automatically/internally  to the reducer function
+
+*.Internally useReducer uses state,
+*. It is used to managing the state
+*.
