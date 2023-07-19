@@ -7,6 +7,7 @@ import UsestateHookExample2 from './Components/Usestatehook/UsestateHookExample2
 import UseReducer from './Components/UseReducer/UseReducer';
 import UseReducerExample2 from './Components/UseReducer/UseReducerExample2';
 import UseReducerCopy from './Components/UseReducer/UseReducerCopy';
+import TodoTaskUsingUseReducer from './Components/UseReducer/TodoTaskUsingUseReducer';
 function App() {
 
   return (
@@ -15,8 +16,9 @@ function App() {
     {/* <UsestateHookExample2/> */}
     {/* <UseEffectHook/> */}
     {/* <UseReducer/> */}
-    <UseReducerExample2/>
-  <UseReducerCopy/>
+    {/* <UseReducerExample2/>
+  <UseReducerCopy/> */}
+  <TodoTaskUsingUseReducer/>
     </div>
   );
 }
