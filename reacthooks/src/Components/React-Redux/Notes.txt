@@ -1,0 +1,61 @@
+//REACT-REDUX STEPS
+step1:
+Install required libraries
+npm install @reduxjs/toolkit react-redux
+Step2:
+create a redux store:
+In Redux, the "store" is a central and immutable object that holds the state of your entire application. It is the heart of the Redux architecture and acts as a single source of truth for your application's data. The store is responsible for managing and updating the state based on actions dispatched to it.
+
+The Redux store has the following key characteristics:
+
+1. **Single Source of Truth:** The entire state of your application is stored in a single JavaScript object within the Redux store. This makes it easy to access and update the state from anywhere in your application.
+
+2. **Immutable State:** The state stored in the Redux store is immutable, meaning it cannot be changed directly. Instead, when you need to update the state, you dispatch actions, which describe the changes you want to make.
+
+3. **State Updates are Predictable:** State changes in the Redux store are handled by pure functions called reducers. Reducers take the current state and an action as input and return a new state as output. Because reducers are pure functions, the state updates are predictable and easy to test.
+
+4. **Dispatching Actions:** To update the state in the Redux store, you dispatch actions using the `store.dispatch(action)` method. Actions are plain JavaScript objects that must have a `type` property describing the type of action being performed.
+
+5. **Subscribing to Store Changes:** You can subscribe to changes in the Redux store using the `store.subscribe(listener)` method. This allows components to be notified whenever the state in the store changes, so they can update accordingly.
+
+6. **Middleware:** Redux allows you to use middleware to extend the behavior of the store. Middleware intercepts dispatched actions before they reach the reducers, enabling additional capabilities such as handling asynchronous actions or logging.
+
+The typical flow of data in Redux is unidirectional: components dispatch actions to the store, the actions are processed by reducers to update the state in the store, and then the updated state is propagated back to the components, causing them to re-render with the new data.
+
+In summary, the Redux store serves as a central repository for your application's state, providing a predictable and organized way to manage data and state changes across your entire application.
+STEP3:
+Provide the Redux Store to React:
+Step4:
+Create a Redux State Slice/reducers
+Step5:
+Add Slice Reducers to the Store
+Step6:
+Use Redux State and Actions in React Components
+Redux data flow:
+
+
+When an action is dispatched in a React-Redux application, the Redux store is responsible for invoking the reducers. The process goes like this:
+
+1. Action Dispatch: In your React components or other parts of the application, 
+you dispatch an action. Dispatching an action means sending a plain JavaScript object with a `type` property and optional payload to the Redux store.
+
+2. Redux Store: The Redux store receives the dispatched action. 
+It is a single source of truth for the entire application's state.
+
+3. Reducer Invocation: The store passes the action to all registered reducers. 
+Each reducer is a pure function responsible for updating a specific slice of the application state. 
+The reducer will look at the `type` of the action and decide whether it needs to modify its part of the state or not.
+
+4. State Update: The reducer updates its corresponding part of the state based on the action.
+ It should create a new state object and not modify the existing state directly (immutability is crucial in Redux). 
+ Redux Toolkit, which is commonly used with React-Redux, simplifies this process by using the Immer library to handle immutable updates in a more convenient way.
+
+5. New State: Once all the reducers have been invoked and the state has been updated accordingly, 
+the Redux store holds the new state.
+
+6. Subscribers Notified: All connected components or listeners that have subscribed to the store are notified of the state change.
+ React-Redux provides a `useSelector` hook or `connect` HOC (Higher-Order Component) to connect React components with the Redux store and automatically subscribe to state changes.
+
+7. Component Rerender: The connected components will rerender automatically, reflecting the changes in the state.
+
+By following this pattern, React-Redux ensures that components can efficiently access the necessary state without passing down props through multiple levels of the component tree. It simplifies state management and makes it more predictable, maintainable, and testable.

@@ -1,7 +1,4 @@
-import { ListItem } from "@mui/material";
-import excludeVariablesFromRoot from "@mui/material/styles/excludeVariablesFromRoot";
 import React, { useReducer, useState } from "react";
-
 const reducer = (state, action) => {
   if (action.type === "ADD_TODO") {
     return {
@@ -24,17 +21,14 @@ const reducer = (state, action) => {
           id: action.payload.id,
           todoItem: action.payload.todoItem,
         };
+      } else {
+        return eachtodo;
       }
-      else{
-       return  eachtodo
-      }
-    
     });
-      return {
-        ...state,
-        todolist:updatedtodos,
-      };
-  
+    return {
+      ...state,
+      todolist: updatedtodos,
+    };
   }
   if (action.type === "DELETE_TODO") {
     const newTodoItems = state.todolist.filter((eachitem) => {
@@ -67,16 +61,15 @@ const TodoTaskUsingUseReducer = () => {
           todoItem: todovalue,
         },
       });
-       dispatch({
-         type: "EDIT_TODO",
-         payload: {
-           status:false,
-           id: "",
-           todoItem:"",
-         },
-       });
-       setTodoValue("");
-
+      dispatch({
+        type: "EDIT_TODO",
+        payload: {
+          status: false,
+          id: "",
+          todoItem: "",
+        },
+      });
+      setTodoValue("");
     } else {
       dispatch({
         type: "ADD_TODO",
@@ -144,7 +137,6 @@ const TodoTaskUsingUseReducer = () => {
     </>
   );
 };
-
 export default TodoTaskUsingUseReducer;
 // Edit operation steps:
 // 1. we need to find id of that particular todo ListItem
